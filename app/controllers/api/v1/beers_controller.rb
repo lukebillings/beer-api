@@ -10,11 +10,3 @@ class Api::V1::BeersController < ApplicationController
       @beer = Beer.find(params[:id])
     end
 end
-
-
-
-
-
-
-
-     # @beers = Beer.where(name: params[:beer_name])
