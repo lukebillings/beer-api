@@ -1,7 +1,7 @@
 class Api::V1::BeersController < ApplicationController
   def index
-    if params[:query].present?
-     @beers = Beer.where(name: params[:query])
+    if params[:name].present?
+     @beers = Beer.where(name: params[:name])
     else
       @beers = Beer.all
     end
