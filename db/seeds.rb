@@ -8,7 +8,7 @@
 
 require 'rest-client'
 
-#uncomment line by line and run rails db:seed (do this 5 times), will get all data from api (325 results)
+#Uncomment line by line and run rails db:seed (do this 5 times), will get all data from api (325 results)
 
   # response = RestClient.get 'https://api.punkapi.com/v2/beers?page=1&per_page=80'
   # response = RestClient.get 'https://api.punkapi.com/v2/beers?page=2&per_page=80'

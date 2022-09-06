@@ -1,6 +1,6 @@
 # README
 
-External API
+External facing API
 
 Get a Single Beer
 http://localhost:3000/api/v1/beers/:id
@@ -41,4 +41,4 @@ RSPEC (could only get a test for 'get ALL beers' working with FactoryBot data
 Extra question:
 What happens if in a couple of months, we are asked to get beers from 2 different external APIs? What would we have to change?)
 
-I think we would have to add another method to map for each new API as the new API's JSON keys may be different from the PUNK API's.
+I think we would have to add new methods to map each new API's JSON keys to our Beer model as they may be different from the PUNK API's.
