@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+External API
 
-Things you may want to cover:
+Get a Single Beer
+http://localhost:3000/api/v1/beers/:id
 
-* Ruby version
+GET
+http://localhost:3000/api/v1/beers
 
-* System dependencies
+GET all beers for a given name
+PARAM
+beer_name
+e.g.
+http://localhost:3000/api/v1/beers?beer_name=IPA
 
-* Configuration
+***************
 
-* Database creation
+How To Run
+bundle install
+rails db:create
+rails db:migrate
+rails db:seed
+rails s
 
-* Database initialization
+***************
 
-* How to run the test suite
+Testing
 
-* Services (job queues, cache servers, search engines, etc.)
+I've tried the following to test the api.
 
-* Deployment instructions
+Postman (all user stories work) ,
+Curl in terminal (all user stories work) e.g;
+  curl -s http://localhost:3000/api/v1/beers | jq
+  curl -s http://localhost:3000/api/v1/beers/1 | jq
+  curl -s http://localhost:3000/api/v1/beers?beer_name=IPA | jq
+RSPEC (could only get a test for 'get ALL beers' working with FactoryBot data
 
-* ...
+***************
+
+Extra question:
+What happens if in a couple of months, we are asked to get beers from 2 different external APIs? What would we have to change?)
+
+I think we would have to add another method to map for each new API as the new API's JSON keys may be different from the PUNK API's.
