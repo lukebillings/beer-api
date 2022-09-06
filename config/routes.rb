@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :beers, only: [ :index, :show ]
+      resources :beers, only: [ :index, :show, :search ]
     end
   end
 end
