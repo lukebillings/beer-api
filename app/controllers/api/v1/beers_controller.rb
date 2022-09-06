@@ -1,7 +1,7 @@
 class Api::V1::BeersController < ApplicationController
   def index
     if params[:beer_name].present?
-     @beers = Beer.where(name: params[:beer_name])
+     @beers = Beer.where("name ILIKE ?", "%#{params[:beer_name]}%")
     else
       @beers = Beer.all
     end
@@ -10,3 +10,11 @@ class Api::V1::BeersController < ApplicationController
       @beer = Beer.find(params[:id])
     end
 end
+
+
+
+
+
+
+
+     # @beers = Beer.where(name: params[:beer_name])
